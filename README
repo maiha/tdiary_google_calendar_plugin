@@ -1,0 +1,24 @@
+TdiaryGoogleCalendarPlugin
+==========================
+
+A tdiary plugin that shows event list from google calendar  
+
+Usage
+=====
+   <%= google_calendar 'MAIL', 'PASS', 'CALENDAR_FEED_URL', 'OPTIONS' %>
+
+Options
+=======
+   :max  : max number of output (default: 10)
+   :days : range of output days (default: 3..14)
+           (min: ensure at least count of entries even if count exceeds :max option)
+           (max: muximum days for search)
+
+Example
+=======
+  <ul class=calendar>
+    <%= goolge_calendar 'maiha@gmail...', 'xxx', 'http://www.google.com/calendar/feeds/t69rg.../full', :days=>(1..7), :limit=>20 %>
+  </ul>
+
+
+Copyright (c) 2009 maiha@wota.jp, released under the MIT license
